@@ -1,0 +1,55 @@
+/* apps/web/src/styles/globals.css */
+
+/* 1. Tailwind’s Preflight, components & utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Global box-sizing reset */
+*,
+*::before,
+*::after {
+  @apply box-border;
+}
+
+/* 3. Remove default margin/padding and enable antialiasing */
+html,
+body {
+  @apply m-0 p-0 antialiased;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  background-color: theme('colors.gray.50');
+  color: theme('colors.gray.900');
+}
+
+/* 4. Default link styling */
+a {
+  @apply text-blue-600 hover:text-blue-700 no-underline;
+}
+
+/* 5. Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-gray-900;
+}
+
+/* 6. Images & media fluidity */
+img,
+picture,
+video,
+canvas,
+svg {
+  @apply max-w-full h-auto;
+}
+
+/* 7. Form elements reset */
+button,
+input,
+select,
+textarea {
+  @apply font-sans;
+}
+
+html, body, #__next {
+    height: 100%;
+  }
